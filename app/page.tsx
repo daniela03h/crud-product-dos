@@ -1,6 +1,6 @@
 'use client'
 
-import { Table } from "./_components/table";
+import { Table } from "./_components/Table/table";
 
 export default function Home() {
   return (

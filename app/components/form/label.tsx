@@ -3,7 +3,7 @@ import { ILabel } from '@/app/types/interfaces';
 
 
 
-const Label: React.FC<ILabel> =(name)=> {
+const Label: React.FC<ILabel> =({name})=> {
     return(
         <label>
             {name}

@@ -15,4 +15,11 @@ export interface IButton {
     onClick?: () => void;
     id?: string;
     className?: string;
+    name?: string;
+}
+
+export interface ITextArea{
+    placeholder: string;
+    id?: string;
+    name?: string;
 }

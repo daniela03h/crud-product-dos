@@ -1,10 +1,12 @@
 import Image from "next/image";
-import Label from "./components/form/label";
+import Link from "next/link";
 
 
 
 export default function Home() {
   return (
-   <h1>hola</h1>
+    <main>
+      <Link href="/form"> formulario</Link>
+    </main>
   );
 }

@@ -1,7 +1,7 @@
 'use client'
+
 import Image from "next/image";
 import Link from "next/link";
-
 import { Table } from "./_components/table";
 import HeaderComponent from "./components/header";
 

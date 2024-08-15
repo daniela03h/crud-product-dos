@@ -7,8 +7,7 @@ import { StyleInput } from "./styled";
 const Input:React.FC<IInput> = ({type, placeholder, id, className, name, onChange , value})=>{
     return(
 
-        <input type={type} name={name} id={id} placeholder={placeholder} className={className} onChange={onChange} value={value}/>
-
+        <StyleInput type={type} name={name} id={id} placeholder={placeholder} className={className} onChange={onChange} value={value}/>
     )
 }
 

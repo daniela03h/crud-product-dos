@@ -23,6 +23,7 @@ export function Table() {
                 </thead>
                 <tbody>
                     {data.map((value, key) => {
+                        
                         return (
                             <TableRow key={key}>
                                 <TableCell>{value.title}</TableCell>

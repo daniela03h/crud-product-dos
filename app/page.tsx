@@ -4,8 +4,6 @@ import Link from "next/link";
 import { Table } from "./_components/Table/table";
 import HeaderComponent from "./_components/Header/header";
 
-
-
 export default function Home() {
   return (
     <>

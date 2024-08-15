@@ -23,7 +23,7 @@ export default function FormView() {
           id={"price_Input"}
         />
         <Button id={"btn_save"} name={"Guardar"}/>
-        <Button id={"btn_save"} name={"Cancelar"}/>
+        <Button id={"btn_cancel"} name={"Cancelar"}/>
       </form>
     </main>
   );

@@ -1,9 +1,10 @@
 import React from "react";
 import { ITextArea } from "../../_types/types";
+import { StyleText } from "./styled";
 
 const TextArea: React.FC<ITextArea> =({placeholder, id, name})=>{
     return (
-        <textarea name={name} id={id} placeholder={placeholder}></textarea>
+        <StyleText name={name} id={id} placeholder={placeholder}></StyleText>
     )
 }
 

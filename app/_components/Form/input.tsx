@@ -1,9 +1,10 @@
+import { IInput } from "@/app/_types/types";
 import React from "react";
-import { IInput } from "../../_types/types";
 
-const Input:React.FC<IInput> = ({type, placeholder, id, className, name})=>{
+
+const Input:React.FC<IInput> = ({type, placeholder, id, className, name, onChange , value})=>{
     return(
-        <input type={type} name={name} id={id} placeholder={placeholder} className={className}/>
+        <input type={type} name={name} id={id} placeholder={placeholder} className={className} onChange={onChange} value={value}/>
     )
 }
 

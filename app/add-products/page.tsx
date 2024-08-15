@@ -1,14 +1,17 @@
 "use client"
 import { useState } from "react";
-import { productsArray } from "../_api/api";
+// import { productsArray } from "../_api/api";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Input from "../_components/Form/input";
 import Label from "../_components/Form/label";
 import TextArea from "../_components/Form/textArea";
-import HeaderComponent from "../_components/Header/header";import Button from "../_components/Form/button"
+import HeaderComponent from "../_components/Header/header";
+import { errorAlert, successAlert } from "../_alerts/alerts";
+import postProducts from "../_api/api";
+import Button from "../_components/Form/button"
 import { CardForm, ContenButon, Descripcion, Formulario, StyleContent, Titulo } from "../_components/Form/styled";
-import { successAlert } from "../_alerts/alerts";
+
 
 export default function FormView() {
   const router=useRouter();
@@ -21,8 +24,14 @@ export default function FormView() {
 
   const handleSubmit = (event:React.FormEvent<HTMLFormElement>)=>{
     event.preventDefault();
-    productsArray.push(values)
-    successAlert("Se creo producto exitosamente")
+    try{
+      postProducts(values);
+      successAlert("Se creo producto exitosamente")
+      
+    }catch(e){
+      console.log("e");
+      
+    }
     setValues({
       title: "",
       description: "",

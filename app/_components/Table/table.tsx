@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { productsArray } from "../../_api/api";
 import { IProduct } from "../../_types/types";
 import { StyledTable, TableCell, TableHeader, TableRow, TableWrapper } from "./styled";
 
@@ -7,7 +6,9 @@ export function Table() {
     const [data, setData] = useState<IProduct[]>([]);
 
     useEffect(() => {
-        setData(productsArray)
+        fetch("http://localhost:3000/products")
+        .then(response => response.json())
+        .then(data => setData(data))
     }, [])
 
     return (

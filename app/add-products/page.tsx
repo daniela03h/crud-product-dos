@@ -2,13 +2,15 @@
 import { useState } from "react";
 // import { productsArray } from "../_api/api";
 import { useRouter } from "next/navigation";
-import Label from "../_components/Form/label";
+import Link from "next/link";
 import Input from "../_components/Form/input";
+import Label from "../_components/Form/label";
 import TextArea from "../_components/Form/textArea";
 import HeaderComponent from "../_components/Header/header";
-import Link from "next/link";
 import { errorAlert, successAlert } from "../_alerts/alerts";
 import postProducts from "../_api/api";
+import Button from "../_components/Form/button"
+import { CardForm, ContenButon, Descripcion, Formulario, StyleContent, Titulo } from "../_components/Form/styled";
 
 
 export default function FormView() {
@@ -53,9 +55,13 @@ export default function FormView() {
   return (
     <>
     <HeaderComponent><Link href="/"> Home</Link></HeaderComponent>
-    <main>
-      <form action="" onSubmit={handleSubmit}>
-        <Label name={"Nombre del produco"} />
+
+    <StyleContent>
+        <CardForm>
+           <Titulo>Agregar un nuevo producto</Titulo>
+           <Descripcion>Completa los campos para registrar un nuevo producto.</Descripcion>
+      <Formulario  action="" onSubmit={handleSubmit}>
+        <Label name={"Nombre del producto"} />
         <Input
           type={"text"}
           name = {"title"}
@@ -64,7 +70,7 @@ export default function FormView() {
           onChange={handleChange}
           value={values.title}
         />
-        <Label name={"Descripcion del prodcuto"} />
+        <Label name={"Descripcion del producto"} />
         <TextArea placeholder={"Descripcion del producto"} id={"description_textArea"} onChange={handleChange} name = {"description"} value={values.description}/>
         <Label name={"Precio"} />
         <Input
@@ -75,9 +81,13 @@ export default function FormView() {
           onChange={handleChange}
           value={String(values.price)}
         />
-        <button> Enviar </button>
-      </form>
-    </main>
+         <ContenButon>
+            <Button id={"btn_cancel"} name={"Cancelar"}  color={"gray"}/>
+            <Button id={"btn_save"} name={"Guardar"} color={"#4CAF50"}/>
+          </ContenButon>
+      </Formulario >
+      </CardForm>
+    </StyleContent>
     </>
   );
 }

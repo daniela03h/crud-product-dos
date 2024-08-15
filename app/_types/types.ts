@@ -20,7 +20,7 @@ export interface IInput {
 }
 
 export interface IButton {
-    onClick?: () => void;
+    onClick?: any;
     id?: string;
     className?: string;
     name?: string;

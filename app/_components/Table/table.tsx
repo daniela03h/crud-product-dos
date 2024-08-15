@@ -6,7 +6,7 @@ export function Table() {
     const [data, setData] = useState<IProduct[]>([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/products")
+        fetch("http://localhost:8000/products")
         .then(response => response.json())
         .then(data => setData(data))
     }, [])

@@ -8,5 +8,4 @@ const Button: React.FC<IButton>=({id, className, onClick, name,color})=>{
     )
 }
 
-
 export default Button;

@@ -82,7 +82,10 @@ export default function FormView() {
           value={String(values.price)}
         />
          <ContenButon>
-            <Button id={"btn_cancel"} name={"Cancelar"}  color={"gray"}/>
+            <Button id={"btn_cancel"} name={"Cancelar"}  color={"gray"} onClick={(e:React.MouseEvent<HTMLButtonElement>)=>{
+              e.preventDefault();
+              router.push('/');
+            }}/>
             <Button id={"btn_save"} name={"Guardar"} color={"#4CAF50"}/>
           </ContenButon>
       </Formulario >

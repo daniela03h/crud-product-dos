@@ -29,6 +29,12 @@
       "title": "fed",
       "description": "cdc",
       "price": "3"
+    },
+    {
+      "id": "f1f4",
+      "title": "",
+      "description": "",
+      "price": ""
     }
   ]
 }

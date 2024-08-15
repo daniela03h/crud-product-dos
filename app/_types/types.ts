@@ -1,8 +1,8 @@
-export interface IProduct{
-    title:string;
-    description:string;
-    price:number;
-    image?:string
+export interface IProduct {
+    title: string;
+    description: string;
+    price: string;
+    image?: string
 }
 
 export interface ILabel {
@@ -11,11 +11,12 @@ export interface ILabel {
 
 export interface IInput {
     type: string;
-    placeholder: string;
+    placeholder?: string;
     id?: string;
-    onChange?: () => void;
     className?: string;
-    name?: string;
+    name: string;
+    onChange: React.ChangeEventHandler<HTMLInputElement>;
+    value: string | number;
 }
 
 export interface IButton {
@@ -25,8 +26,10 @@ export interface IButton {
     name?: string;
 }
 
-export interface ITextArea{
+export interface ITextArea {
     placeholder: string;
     id?: string;
     name?: string;
+    onChange?: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    value: string
 }

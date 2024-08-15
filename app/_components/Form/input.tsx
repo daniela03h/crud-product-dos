@@ -1,5 +1,5 @@
 import React from "react";
-import { IInput } from "@/app/types/interfaces";
+import { IInput } from "../../_types/types";
 
 const Input:React.FC<IInput> = ({type, placeholder, id, className, name})=>{
     return(

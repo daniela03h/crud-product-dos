@@ -7,6 +7,7 @@ import Input from "../_components/Form/input";
 import TextArea from "../_components/Form/textArea";
 import HeaderComponent from "../_components/Header/header";
 import Link from "next/link";
+import { successAlert } from "../_alerts/alerts";
 
 
 export default function FormView() {
@@ -21,7 +22,7 @@ export default function FormView() {
   const handleSubmit = (event:React.FormEvent<HTMLFormElement>)=>{
     event.preventDefault();
     productsArray.push(values)
-    console.log(values); 
+    successAlert("Se creo producto exitosamente")
     setValues({
       title: "",
       description: "",

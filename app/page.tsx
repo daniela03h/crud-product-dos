@@ -2,15 +2,20 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Table } from "./_components/table";
+import Image from "next/image";
+import Link from "next/link";
+import { Table } from "./_components/Table/table";
+import HeaderComponent from "./components/header";
+
 
 
 export default function Home() {
   return (
-    <main>
-      <Link href="/form"> formulario</Link>
-      <h1>Index</h1>
-      <Table/>
-    </main>
+    <>
+      <HeaderComponent><Link href="/form"> Create Product</Link></HeaderComponent>
+      <main>
+        <Table />
+      </main>
+    </>
   );
 }

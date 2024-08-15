@@ -1,13 +1,14 @@
 "use client"
 import { useState } from "react";
-import { productsArray } from "../_api/api";
+// import { productsArray } from "../_api/api";
 import { useRouter } from "next/navigation";
 import Label from "../_components/Form/label";
 import Input from "../_components/Form/input";
 import TextArea from "../_components/Form/textArea";
 import HeaderComponent from "../_components/Header/header";
 import Link from "next/link";
-import { successAlert } from "../_alerts/alerts";
+import { errorAlert, successAlert } from "../_alerts/alerts";
+import postProducts from "../_api/api";
 
 
 export default function FormView() {
@@ -21,8 +22,14 @@ export default function FormView() {
 
   const handleSubmit = (event:React.FormEvent<HTMLFormElement>)=>{
     event.preventDefault();
-    productsArray.push(values)
-    successAlert("Se creo producto exitosamente")
+    try{
+      postProducts(values);
+      successAlert("Se creo producto exitosamente")
+      
+    }catch(e){
+      console.log("e");
+      
+    }
     setValues({
       title: "",
       description: "",

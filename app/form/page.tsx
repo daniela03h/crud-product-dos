@@ -3,7 +3,7 @@ import Input from "../components/form/input";
 import Label from "../components/form/label";
 import TextArea from "../components/form/textArea";
 import HeaderComponent from "../components/header";
-
+import Button from "../components/form/button"
 
 export default function FormView() {
   return (
@@ -25,10 +25,11 @@ export default function FormView() {
           placeholder={"Precio del producto"}
           id={"price_Input"}
         />
+        <Button id={"btn_save"} name={"Guardar"}/>
+        <Button id={"btn_cancel"} name={"Cancelar"}/>
       </form>
     </main>
     </>
-   
   );
 }
 

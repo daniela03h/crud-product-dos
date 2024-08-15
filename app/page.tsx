@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { Table } from "./_components/Table/table";
-import HeaderComponent from "./components/header";
+import HeaderComponent from "./_components/Header/header";
 
 
 
 export default function Home() {
   return (
     <>
-      <HeaderComponent><Link href="/form"> Create Product</Link></HeaderComponent>
+      <HeaderComponent><Link href="/add-products"> Create Product</Link></HeaderComponent>
       <main>
         <Table />
       </main>

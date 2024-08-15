@@ -1,5 +1,5 @@
 import React from "react";
-import { ITextArea } from "@/app/types/interfaces";
+import { ITextArea } from "../../_types/types";
 
 const TextArea: React.FC<ITextArea> =({placeholder, id, name})=>{
     return (

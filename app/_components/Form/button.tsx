@@ -1,5 +1,5 @@
 import React from "react";
-import { IButton } from "@/app/types/interfaces";
+import { IButton } from "../../_types/types";
 
 const Button: React.FC<IButton>=({id, className, onClick, name})=>{
     return(

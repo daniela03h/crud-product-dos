@@ -1,5 +1,5 @@
 import React from 'react';
-import { ILabel } from '@/app/types/interfaces';
+import { ILabel } from '../../_types/types';
 
 
 

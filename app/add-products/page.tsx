@@ -1,9 +1,9 @@
 import Link from "next/link";
-import Input from "../components/form/input";
-import Label from "../components/form/label";
-import TextArea from "../components/form/textArea";
-import HeaderComponent from "../components/header";
-import Button from "../components/form/button"
+import Input from "../_components/Form/input";
+import Label from "../_components/Form/label";
+import TextArea from "../_components/Form/textArea";
+import HeaderComponent from "../_components/Header/header";
+import Button from "../_components/Form/button"
 
 export default function FormView() {
   return (

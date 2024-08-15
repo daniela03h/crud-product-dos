@@ -24,6 +24,7 @@ export interface IButton {
     id?: string;
     className?: string;
     name?: string;
+    color?:string;
 }
 
 export interface ITextArea {

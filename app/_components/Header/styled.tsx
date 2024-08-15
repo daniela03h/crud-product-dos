@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Header = styled.header`
     height: 62px;
-    background-color: lightgray;
+    background-color: #899752;
     display: flex;
     align-items: center;
     padding: 0 16px;
@@ -12,4 +12,8 @@ export const Header = styled.header`
 export const Title = styled.h1`
     font-size: 24px;
     font-weight: bold;
+`
+export const Links = styled.link `
+font-size: 24px;
+font-weight: bold;
 `

@@ -1,6 +1,7 @@
 import Input from "../components/form/input";
 import Label from "../components/form/label";
 import TextArea from "../components/form/textArea";
+import Button from "../components/form/button"
 
 
 export default function FormView() {
@@ -21,6 +22,8 @@ export default function FormView() {
           placeholder={"Precio del producto"}
           id={"price_Input"}
         />
+        <Button id={"btn_save"} name={"Guardar"}/>
+        <Button id={"btn_save"} name={"Cancelar"}/>
       </form>
     </main>
   );

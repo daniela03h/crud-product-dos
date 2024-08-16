@@ -1,7 +1,18 @@
 import { errorAlert } from "../../utils/_alerts/alerts";
 import { IProduct } from "../../_types/types"
 
-async function postProducts(product: IProduct): Promise<IProduct> {
+
+export async function getProducts() {
+    const response = await fetch("http://localhost:8000/products");
+    const data = await response.json();
+
+    if (response.status !== 200) {
+        throw new Error("No se pudo mostrar los productos")
+    }
+    return data;
+}
+
+export async function postProducts(product: IProduct): Promise<IProduct> {
     const response = await fetch("http://localhost:8000/products", {
         method: "POST",
         headers: {
@@ -21,4 +32,3 @@ async function postProducts(product: IProduct): Promise<IProduct> {
     return data
 }
 
-export default postProducts;

@@ -2,8 +2,7 @@ export interface IProduct {
     title: string;
     description: string;
     price: string;
-    image?: string;
-    id?: string;
+    image: string
 }
 
 export interface ILabel {
@@ -34,4 +33,9 @@ export interface ITextArea {
     name?: string;
     onChange?: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     value: string
+}
+
+export interface IImage {
+    src: string,
+    alt?: string
 }

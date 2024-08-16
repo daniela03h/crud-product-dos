@@ -5,7 +5,7 @@ display: flex;
 justify-content: center;
 `;
 
-export const Titulo = styled.h1`
+export const Tittle = styled.h1`
 text-align: center;
 font-weight: 600;
 `
@@ -25,7 +25,7 @@ box-sizing: border-box;
 background-color: #f6f8ee;
 `;
 
-export const Formulario = styled.form`
+export const Form = styled.form`
 display: flex;
 flex-direction: column;
 gap: 7px

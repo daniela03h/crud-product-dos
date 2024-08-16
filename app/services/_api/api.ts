@@ -32,3 +32,5 @@ export async function postProducts(product: IProduct): Promise<IProduct> {
     return data
 }
 
+
+

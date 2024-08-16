@@ -1,5 +1,5 @@
 import { ITrProps } from "@/app/_types/types";
-import { TableRow } from "../../Table/styled";
+import { TableRow } from '../../product-table/styled';
 import Tc from "../TableCell/table-cell";
 
 const Tr:React.FC<ITrProps> = ({row,columns}) => {

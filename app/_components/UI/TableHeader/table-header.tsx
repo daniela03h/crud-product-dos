@@ -1,5 +1,5 @@
 import { ITableHeaderProps } from "@/app/_types/types";
-import { TableHeader, TableRow } from "../../Table/styled";
+import { TableHeader, TableRow } from '../../product-table/styled';
 
 
 

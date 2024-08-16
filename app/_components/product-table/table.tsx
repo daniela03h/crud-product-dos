@@ -1,22 +1,15 @@
-"use client"
 import { useEffect, useState } from "react";
 import { IProduct } from "../../_types/types";
 import { StyledTable, TableCell, TableHeader, TableRow, TableWrapper } from "./styled";
-import { getProducts } from "@/app/services/_api/api";
-import { errorAlert } from "@/app/utils/_alerts/alerts";
+import Image from "../UI/Image/image";
 
 export function Table() {
     const [data, setData] = useState<IProduct[]>([]);
 
     useEffect(() => {
-        getProducts()
-        .then(data => {
-            setData(data)
-        })
-        .catch(e => {
-            errorAlert("No se pudo mostrar los productos, vuelva a intentar")
-            console.log(e);
-        })
+        fetch("http://localhost:8000/products")
+        .then(response => response.json())
+        .then(data => setData(data))
     }, [])
 
     return (
@@ -27,6 +20,8 @@ export function Table() {
                         <TableHeader>Título</TableHeader>
                         <TableHeader>Descripción</TableHeader>
                         <TableHeader>Precio</TableHeader>
+                        <TableHeader>Imagen</TableHeader>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +32,7 @@ export function Table() {
                                 <TableCell>{value.title}</TableCell>
                                 <TableCell>{value.description}</TableCell>
                                 <TableCell>{value.price}</TableCell>
+                                <TableCell><Image src={value.image} /></TableCell>
                             </TableRow>
                         )
                     })}

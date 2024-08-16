@@ -39,3 +39,25 @@ export interface IImage {
     src: string,
     alt?: string
 }
+
+export interface ITableRowData {
+    [key: string]: string; // Tipo general para los valores de las filas, puede ser cadena o número
+}
+
+export interface CustomTableProps {
+    columns: string[];
+    data: ITableRowData[];
+}
+
+export interface ITrProps{
+    columns:string[];
+    row:ITableRowData;
+}
+
+export interface ITcProps{
+    content:string;
+}
+
+export interface ITableHeaderProps {
+    columns: string[];
+}

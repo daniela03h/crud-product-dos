@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const ContenButon = styled.div`
+export const ContainerButton = styled.div`
 display: flex;
 justify-content: end;
 gap: 10px;
 `;
 
-export const StyleButon = styled.button`
+export const StyleButton = styled.button`
 background-color: ${props => props.color || "gray"};
 width: 70px;
 height: 30px;

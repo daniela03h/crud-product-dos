@@ -1,18 +1,18 @@
 "use client"
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { CardForm, Descripcion, Form, StyleContent, Tittle } from "../_components/create-form/form-style";
+import Button from "../_components/UI/Button/button";
+import { ContainerButton } from "../_components/UI/Button/button-style";
+import HeaderComponent from "../_components/UI/Header/header";
 import Input from "../_components/UI/Input/input";
 import Label from "../_components/UI/Label/label";
 import TextArea from "../_components/UI/TextArea/textArea";
-import HeaderComponent from "../_components/UI/Header/header";
-import { successAlert } from "../utils/_alerts/alerts";
-import postProducts from "../services/_api/api";
-import Button from "../_components/UI/Button/button";
-import { CardForm, Descripcion, Formulario, StyleContent, Titulo } from "../_components/Form/form-style";
-import { ContenButon } from "../_components/UI/Button/button-style"
 import { IProduct } from "../_types/types";
+import postProducts from "../services/_api/api";
+import { successAlert } from "../utils/_alerts/alerts";
 
 const initialState = {
   title: "",
@@ -47,15 +47,20 @@ export default function FormView() {
     })
   }
 
+  const handleButtonCancel = (e: React.MouseEvent<HTMLButtonElement>) => {
+                e.preventDefault();
+                router.push('/');
+              }
+
   return (
     <>
       <HeaderComponent><Link href="/"> Home</Link></HeaderComponent>
 
       <StyleContent>
         <CardForm>
-          <Titulo>Agregar un nuevo producto</Titulo>
+          <Tittle>Agregar un nuevo producto</Tittle>
           <Descripcion>Completa los campos para registrar un nuevo producto.</Descripcion>
-          <Formulario action="" onSubmit={handleSubmit}>
+          <Form action="" onSubmit={handleSubmit}>
             <Label name={"Nombre del producto"} />
             <Input
               type={"text"}
@@ -76,14 +81,11 @@ export default function FormView() {
               onChange={handleChange}
               value={String(values.price)}
             />
-            <ContenButon>
-              <Button id={"btn_cancel"} name={"Cancelar"} color={"gray"} onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
-                e.preventDefault();
-                router.push('/');
-              }} />
+            <ContainerButton>
+              <Button id={"btn_cancel"} name={"Cancelar"} color={"gray"} onClick={handleButtonCancel} />
               <Button id={"btn_save"} name={"Guardar"} color={"#4CAF50"} />
-            </ContenButon>
-          </Formulario >
+            </ContainerButton>
+          </Form >
         </CardForm>
       </StyleContent>
     </>

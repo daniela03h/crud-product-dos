@@ -2,7 +2,8 @@ export interface IProduct {
     title: string;
     description: string;
     price: string;
-    image?: string
+    image?: string;
+    id?: string;
 }
 
 export interface ILabel {

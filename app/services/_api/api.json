@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "title": "Estufa eléctrica",
+      "description": "Estufa con la última tecnolgía en ahorro eléctrico",
+      "price": "70",
+      "id": "2d09"
+    },
+    {
+      "id": "d988",
+      "title": "fvdfvd",
+      "description": "cddcdc",
+      "price": "4534"
+    },
+    {
+      "id": "bde8",
+      "title": "oee",
+      "description": "cdscdsc",
+      "price": "32"
+    },
+    {
+      "id": "b7e4",
+      "title": "Prueba",
+      "description": "dsds",
+      "price": "432"
+    },
+    {
+      "id": "5626",
+      "title": "fed",
+      "description": "cdc",
+      "price": "3"
+    },
+    {
+      "id": "f1f4",
+      "title": "",
+      "description": "",
+      "price": ""
+    },
+    {
+      "id": "0645",
+      "title": "mesa",
+      "description": "a",
+      "price": "2"
+    },
+    {
+      "id": "8e64",
+      "title": "mesa",
+      "description": "1",
+      "price": "30"
+    },
+    {
+      "id": "ba07",
+      "title": "mesa",
+      "description": "maderaaa",
+      "price": "1"
+    },
+    {
+      "id": "ba07efef",
+      "title": "mesa",
+      "description": "redfedccedc",
+      "price": "1"
+    },
+    {
+      "id": "e496",
+      "title": "cdzcsac",
+      "description": "dscdcd",
+      "price": "543"
+    }
+  ]
+}

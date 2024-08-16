@@ -8,11 +8,11 @@ import Label from "../_components/UI/Label/label";
 import TextArea from "../_components/UI/TextArea/textArea";
 import HeaderComponent from "../_components/UI/Header/header";
 import { successAlert } from "../utils/_alerts/alerts";
-import postProducts from "../services/_api/api";
 import Button from "../_components/UI/Button/button";
 import { CardForm, Descripcion, Formulario, StyleContent, Titulo } from "../_components/Form/form-style";
 import { ContenButon } from "../_components/UI/Button/button-style"
 import { IProduct } from "../_types/types";
+import { postProducts } from "../services/_api/api";
 
 const initialState = {
   title: "",

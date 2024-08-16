@@ -1,17 +1,16 @@
+import { ITableHeaderProps } from "@/app/_types/types";
 import { TableHeader, TableRow } from "../../Table/styled";
 
-interface TableHeaderProps {
-    columns: string[];
-}
 
-const Th: React.FC<TableHeaderProps> = ({ columns }) => {
+
+const Th: React.FC<ITableHeaderProps> = ({ columns }) => {
     return (
         <thead>
-        <TableRow>
-            {columns.map((col, index) => (
-            <TableHeader key={index}>{col}</TableHeader>
-            ))}
-        </TableRow>
+            <TableRow>
+                {columns.map((col, index) => (
+                <TableHeader key={index}>{col}</TableHeader>
+                ))}
+            </TableRow>
         </thead>
     );
 };

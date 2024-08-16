@@ -53,6 +53,12 @@
       "title": "mesa",
       "description": "maderaaa",
       "price": "1"
+    },
+    {
+      "id": "6c7f",
+      "title": "Juan",
+      "description": "Hola",
+      "price": "23"
     }
   ]
 }

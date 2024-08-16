@@ -1,9 +1,6 @@
 import React from 'react';
 import { TableCell } from '../../Table/styled';
-
-interface ITcProps{
-    content:string;
-}
+import { ITcProps } from '@/app/_types/types';
 
 const Tc:React.FC<ITcProps>= ({content}) => {
     return <TableCell>{content}</TableCell>;

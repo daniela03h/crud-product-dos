@@ -1,14 +1,22 @@
+"use client"
 import { useEffect, useState } from "react";
 import { IProduct } from "../../_types/types";
 import { StyledTable, TableCell, TableHeader, TableRow, TableWrapper } from "./styled";
+import { getProducts } from "@/app/services/_api/api";
+import { errorAlert } from "@/app/utils/_alerts/alerts";
 
 export function Table() {
     const [data, setData] = useState<IProduct[]>([]);
 
     useEffect(() => {
-        fetch("http://localhost:8000/products")
-        .then(response => response.json())
-        .then(data => setData(data))
+        getProducts()
+        .then(data => {
+            setData(data)
+        })
+        .catch(e => {
+            errorAlert("No se pudo mostrar los productos, vuelva a intentar")
+            console.log(e);
+        })
     }, [])
 
     return (

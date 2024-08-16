@@ -17,7 +17,8 @@ import { successAlert } from "../utils/_alerts/alerts";
 const initialState = {
   title: "",
   description: "",
-  price: ""
+  price: "",
+  image:""
 }
 
 export default function FormView() {
@@ -80,6 +81,16 @@ export default function FormView() {
               id={"price_Input"}
               onChange={handleChange}
               value={String(values.price)}
+            />
+
+            <Label name={"URL del producto"} />
+             <Input
+              type={"url"}
+              placeholder={"URL del producto"}
+              name={"image"}
+              id={"img_Input"}
+              onChange={handleChange}
+              value={values.image}
             />
             <ContainerButton>
               <Button id={"btn_cancel"} name={"Cancelar"} color={"gray"} onClick={handleButtonCancel} />

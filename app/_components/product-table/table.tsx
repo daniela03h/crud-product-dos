@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { IProduct } from "../../_types/types";
 import { StyledTable, TableCell, TableHeader, TableRow, TableWrapper } from "./styled";
+import Image from "../UI/Image/image";
 
 export function Table() {
     const [data, setData] = useState<IProduct[]>([]);
@@ -19,6 +20,8 @@ export function Table() {
                         <TableHeader>Título</TableHeader>
                         <TableHeader>Descripción</TableHeader>
                         <TableHeader>Precio</TableHeader>
+                        <TableHeader>Imagen</TableHeader>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -29,6 +32,7 @@ export function Table() {
                                 <TableCell>{value.title}</TableCell>
                                 <TableCell>{value.description}</TableCell>
                                 <TableCell>{value.price}</TableCell>
+                                <TableCell><Image src={value.image} /></TableCell>
                             </TableRow>
                         )
                     })}

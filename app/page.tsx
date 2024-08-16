@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link";
-import { Table } from "./_components/Table/table";
+import { Table } from "./_components/product-table/table";
 import HeaderComponent from "./_components/UI/Header/header";
 
 export default function Home() {

@@ -1,5 +1,5 @@
-import { errorAlert } from "../_alerts/alerts";
-import { IProduct } from "../_types/types"
+import { errorAlert } from "../../utils/_alerts/alerts";
+import { IProduct } from "../../_types/types"
 
 async function postProducts(product: IProduct): Promise<IProduct> {
     const response = await fetch("http://localhost:8000/products", {

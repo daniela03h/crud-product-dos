@@ -1,6 +1,6 @@
-import { IInput } from "../../_types/types";
+import { IInput } from "../../../_types/types";
 import React from "react";
-import { StyleInput } from "./styled";
+import { StyleInput } from "./input-style";
 
 const Input:React.FC<IInput> = ({type, placeholder, id, className, name, onChange , value})=>{
     return(

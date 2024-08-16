@@ -3,23 +3,28 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Input from "../_components/Form/input";
-import Label from "../_components/Form/label";
-import TextArea from "../_components/Form/textArea";
-import HeaderComponent from "../_components/Header/header";
-import { successAlert } from "../_alerts/alerts";
-import postProducts from "../_api/api";
-import Button from "../_components/Form/button"
-import { CardForm, ContenButon, Descripcion, Formulario, StyleContent, Titulo } from "../_components/Form/styled";
+import Input from "../_components/UI/Input/input";
+import Label from "../_components/UI/Label/label";
+import TextArea from "../_components/UI/TextArea/textArea";
+import HeaderComponent from "../_components/UI/Header/header";
+import { successAlert } from "../utils/_alerts/alerts";
+import postProducts from "../services/_api/api";
+import Button from "../_components/UI/Button/button";
+import { CardForm, Descripcion, Formulario, StyleContent, Titulo } from "../_components/Form/form-style";
+import { ContenButon } from "../_components/UI/Button/button-style"
+import { IProduct } from "../_types/types";
+
+const initialState = {
+  title: "",
+  description: "",
+  price: ""
+}
 
 export default function FormView() {
   const router = useRouter();
+  
 
-  const [values, setValues] = useState({
-    title: "",
-    description: "",
-    price: ""
-  })
+  const [values, setValues] = useState<IProduct>(initialState)
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -29,11 +34,7 @@ export default function FormView() {
     } catch (e) {
       console.log("e");
     }
-    setValues({
-      title: "",
-      description: "",
-      price: ""
-    });
+    setValues(initialState);
     router.push("/");
   }
 

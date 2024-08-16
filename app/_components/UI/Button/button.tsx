@@ -1,6 +1,6 @@
 import React from "react";
-import { IButton } from "../../_types/types";
-import { StyleButon } from "./styled";
+import { IButton } from "../../../_types/types";
+import { StyleButon } from "./button-style";
 
 const Button: React.FC<IButton>=({id, className, onClick, name,color})=>{
     return(

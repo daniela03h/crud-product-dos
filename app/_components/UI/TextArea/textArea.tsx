@@ -1,6 +1,6 @@
 import React from "react";
-import { ITextArea } from "../../_types/types";
-import { StyleText } from "./styled";
+import { ITextArea } from "../../../_types/types";
+import { StyleText } from "./textArea-style";
 
 const TextArea: React.FC<ITextArea> =({placeholder, id, name, onChange, value})=>{
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ILabel } from '../../_types/types';
+import { ILabel } from "../../../_types/types";
 
 const Label: React.FC<ILabel> =({name})=> {
     return(

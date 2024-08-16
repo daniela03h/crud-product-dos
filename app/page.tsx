@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Table } from "./_components/Table/table";
-import HeaderComponent from "./_components/Header/header";
+import HeaderComponent from "./_components/UI/Header/header";
 
 export default function Home() {
   return (

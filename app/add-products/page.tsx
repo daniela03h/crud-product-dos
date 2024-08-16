@@ -11,7 +11,7 @@ import Input from "../_components/UI/Input/input";
 import Label from "../_components/UI/Label/label";
 import TextArea from "../_components/UI/TextArea/textArea";
 import { IProduct } from "../_types/types";
-import postProducts from "../services/_api/api";
+import {postProducts} from "../services/_api/api";
 import { successAlert } from "../utils/_alerts/alerts";
 
 const initialState = {

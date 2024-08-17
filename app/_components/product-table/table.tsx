@@ -1,38 +1,27 @@
 import { useEffect, useState } from "react";
-import { IProduct, ITableRowData } from "../../_types/types";
+import { IProduct } from "../../_types/types";
 import { TableWrapper } from "./styled";
 import CustomTable from "../UI/Table/table";
+import { getProducts } from "@/app/services/_api/api";
+import { convertToRowData } from "@/app/utils/table-data-handler/table-data-handler";
 
 export function Table() {
     const [data, setData] = useState<IProduct[]>([]);
     const [columns,setColumns]=useState<string[]>([]);
     
-    function convertToRowData(product: IProduct): ITableRowData {
-        return {
-            title: product.title,
-            description: product.description,
-            price: product.price,
-            image: product.image
-        };
-    }
-
     useEffect(() => {
-        fetch("http://localhost:8000/products")
-        .then(response => response.json())
-        .then(data => {
-            data.forEach((product:any) => {
-                if(product.id){
-                delete product.id
-            }
-            });
-            
-            setColumns(Object.keys(data[1]));
-            setData(data)})
-    }, [])
+        const fetchProducts=async()=>{
+            const products = await getProducts();
+            setData(products);
+            const columns = Object.keys(products[0]).filter(key => key !== 'id');
+            setColumns([...columns,"actions"]);
+        }
+        fetchProducts();
+    }, []);
 
     return (
-        <TableWrapper>
-            <CustomTable columns={columns} data={data.map(convertToRowData)}/>
-        </TableWrapper>
+            <TableWrapper>
+                <CustomTable columns={columns} data={data.map(convertToRowData)}/>
+            </TableWrapper>
     );
 }

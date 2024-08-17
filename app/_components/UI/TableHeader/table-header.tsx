@@ -8,7 +8,7 @@ const Th: React.FC<ITableHeaderProps> = ({ columns }) => {
         <thead>
             <TableRow>
                 {columns.map((col, index) => (
-                <TableHeader key={index}>{col}</TableHeader>
+                <TableHeader key={index}>{col.toUpperCase()}</TableHeader>
                 ))}
             </TableRow>
         </thead>

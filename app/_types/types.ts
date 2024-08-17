@@ -41,7 +41,7 @@ export interface IImage {
 }
 
 export interface ITableRowData {
-    [key: string]: string; // Tipo general para los valores de las filas, puede ser cadena o número
+    [key: string]: string;
 }
 
 export interface CustomTableProps {

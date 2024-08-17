@@ -9,7 +9,6 @@ const CustomTable: React.FC<CustomTableProps> = ({ columns, data }) => {
             <Th columns={columns} />
                 <tbody>
                     {data.map((row, index) => (
-                        // row==="image"? 
                         <Tr key={index} row={row} columns={columns} />
                     ))}
                 </tbody>

@@ -23,8 +23,8 @@ export interface IButton {
     onClick?: any;
     id?: string;
     className?: string;
-    name?: string;
-    color?:string;
+    name?: string | React.ReactNode;
+    color?: string;
 }
 
 export interface ITextArea {
@@ -49,13 +49,13 @@ export interface CustomTableProps {
     data: ITableRowData[];
 }
 
-export interface ITrProps{
-    columns:string[];
-    row:ITableRowData;
+export interface ITrProps {
+    columns: string[];
+    row: ITableRowData;
 }
 
-export interface ITcProps{
-    content:string;
+export interface ITcProps {
+    content: string | React.ReactNode;
 }
 
 export interface ITableHeaderProps {

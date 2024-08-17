@@ -24,7 +24,7 @@ export function Table() {
             }
         }
         fetchProducts();
-    }, []);
+    }, [data]);
 
     return (
             <TableWrapper>

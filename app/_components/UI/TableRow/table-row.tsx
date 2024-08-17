@@ -3,16 +3,23 @@ import { TableRow } from '../../product-table/styled';
 import Tc from "../TableCell/table-cell";
 import Image from "../Image/image";
 import IconButton from "../IconButtons/iconButtons";
+import { deleteProducts } from "@/app/services/_api/api";
 
 const Tr:React.FC<ITrProps> = ({row,columns}) => {
+    const hadleDelete = (event: React.MouseEvent<HTMLButtonElement>)=>{
+        const id  = event.currentTarget.id;
+        deleteProducts(id);
+    }
     return (
         <TableRow>
             {columns.map((col, index) => {
-                 if (col === 'image'){
+                 if (col === 'image'){                
                     return <Image src={row[col]}/>
                  }
-                 else if(col === "actions"){
-                    return <Tc key={index} content={<IconButton name={<i className="bi bi-trash"></i>}/>}></Tc>
+                 else if(col === "actions"){        
+                    return <Tc key={index} content=
+                        {<IconButton onClick={hadleDelete} id={row.id} name={<i className="bi bi-trash"></i>}/>}>
+                    </Tc>
                  }
                  else{
                     return <Tc key={index} content={row[col]}></Tc>

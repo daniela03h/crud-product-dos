@@ -1,13 +1,6 @@
 {
   "products": [
     {
-      "id": "c01a",
-      "title": "i",
-      "description": "i",
-      "price": "1",
-      "image": "https://static.nationalgeographicla.com/files/styles/image_3200/public/nationalgeographic_1468962.jpg?w=1600&h=900"
-    },
-    {
       "id": "c5b0",
       "title": "u",
       "description": "u",
@@ -20,13 +13,6 @@
       "description": "negro",
       "price": "2",
       "image": "https://static.nationalgeographicla.com/files/styles/image_3200/public/nationalgeographic_1468962.jpg?w=1600&h=900"
-    },
-    {
-      "id": "7a2e",
-      "title": "gggg",
-      "description": "ggg",
-      "price": "234",
-      "image": "https://media1.thrillophilia.com/filestore/uwpz857lua13qmvub6um2v93dlrm_IMG%20Worlds%20%20of%20Adventure.jpg?w=400&dpr=2"
     }
   ]
 }

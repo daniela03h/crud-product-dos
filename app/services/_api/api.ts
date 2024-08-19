@@ -31,6 +31,3 @@ export async function postProducts(product: IProduct): Promise<IProduct> {
     const data = response.json();
     return data
 }
-
-
-

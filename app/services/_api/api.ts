@@ -31,3 +31,22 @@ export async function postProducts(product: IProduct): Promise<IProduct> {
     const data = response.json();
     return data
 }
+
+export async function deleteProducts(id: string): Promise<IProduct> {
+    const response = await fetch(`http://localhost:8000/products/${id}`, {
+        method: "DELETE",
+        headers: {
+            'Content-Type': 'Application/json'
+        },
+    })
+
+    if (!response.ok) {
+        errorAlert("No se pudo eliminar el producto")
+        throw new Error("No se pudo eliminar el producto")
+
+    }
+    console.log(response.status);
+
+    const data = response.json();
+    return data
+}

@@ -1,25 +1,18 @@
 {
   "products": [
     {
-      "id": "c5b0",
-      "title": "u",
-      "description": "u",
-      "price": "7",
-      "image": "https://static.nationalgeographicla.com/files/styles/image_3200/public/nationalgeographic_1468962.jpg?w=1600&h=900"
+      "title": "Mazda 2",
+      "description": "El nuevo mazda 2, super compacto y potente",
+      "price": "90000000",
+      "image": "https://autolab.com.co/wp-content/uploads/2022/06/36.jpg",
+      "id": "69cb"
     },
     {
-      "id": "eb2b",
-      "title": "fefe",
-      "description": "dcd",
-      "price": "3",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_2X_757337-MCO72270855335_102023-F.webp"
-    },
-    {
-      "id": "0f10",
-      "title": "Balon ",
-      "description": "Balon ",
-      "price": "30000",
-      "image": "https://i.pinimg.com/originals/98/0b/35/980b354580f5a4eb087d182a45908291.jpg"
+      "id": "61ab",
+      "title": "mercedes",
+      "description": "mercedes a200",
+      "price": "30",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_655835-MCO76356692750_052024-O.webp"
     }
   ]
 }

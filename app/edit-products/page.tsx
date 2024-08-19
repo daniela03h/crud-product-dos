@@ -11,36 +11,27 @@ import Input from "../_components/UI/Input/input";
 import Label from "../_components/UI/Label/label";
 import TextArea from "../_components/UI/TextArea/textArea";
 import { IProduct } from "../_types/types";
-import { postProducts } from "../services/_api/api";
+import { updateProduct, getProduct } from "../services/_api/api";
 import { successAlert } from "../utils/_alerts/alerts";
 
-const getProducts = async () => {
-    const searchParams = window.location.search;
-    const paramsTransformer = new URLSearchParams(searchParams);
-    const Id = paramsTransformer.get("id");
-    const response = await fetch(`http://localhost:8000/products`);
-    const data = await response.json();
-    
-    if (response.status !== 200) {
-        throw new Error("No se pudo mostrar los productos");
-    }
-    
-    return data.find(product => product.id == Id);
-};
+const initialState = {
+  title: "",
+  description: "",
+  price: "",
+  image: ""
+}
 
 export default function FormView() {
   const router = useRouter();
   
-  const [values, setValues] = useState<IProduct>({
-    title: "",
-    description: "",
-    price: "",
-    image: ""
-  });
+  const [values, setValues] = useState<IProduct>(initialState);
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const product = await getProducts();
+      const searchParams = window.location.search;
+      const paramsTransformer = new URLSearchParams(searchParams);
+      const Id = paramsTransformer.get("id");
+      const product = await getProduct(Id!);
       if (product) {
         setValues({
           title: product.title || "",
@@ -57,17 +48,15 @@ export default function FormView() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
-      postProducts(values);
-      successAlert("Se creó el producto exitosamente");
+      const searchParams = window.location.search;
+      const paramsTransformer = new URLSearchParams(searchParams);
+      const Id = paramsTransformer.get("id");
+      updateProduct(Id! ,values);
+      successAlert("Se actualizó el producto exitosamente");
     } catch (e) {
-      console.error("Error al crear el producto:", e);
+      console.error("Error al actualizar el producto:", e);
     }
-    setValues({
-      title: "",
-      description: "",
-      price: "",
-      image: ""
-    });
+    setValues(initialState);
     router.push("/");
   };
 

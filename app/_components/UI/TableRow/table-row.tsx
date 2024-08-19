@@ -1,7 +1,7 @@
 import { ITrProps } from "@/app/_types/types";
 import { TableRow } from '../../product-table/styled';
 import Tc from "../TableCell/table-cell";
-import Image from "../Image/image";
+import Image from "../Imagen/image";
 import IconButton from "../IconButtons/iconButtons";
 import { deleteProducts } from "@/app/services/_api/api";
 import { successAlert } from "@/app/utils/_alerts/alerts";
@@ -17,6 +17,7 @@ const Tr:React.FC<ITrProps> = ({row,columns}) => {
         try{
             await deleteProducts(id);
             successAlert("Se elimino el producto")
+            window.location.reload()
         }
         catch(e){
             console.log(e);

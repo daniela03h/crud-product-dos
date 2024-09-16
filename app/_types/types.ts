@@ -1,4 +1,5 @@
 export interface IProduct {
+    id?: string
     title: string;
     description: string;
     price: string;
@@ -23,8 +24,8 @@ export interface IButton {
     onClick?: any;
     id?: string;
     className?: string;
-    name?: string;
-    color?:string;
+    name?: string | React.ReactNode;
+    color?: string;
 }
 
 export interface ITextArea {
@@ -39,3 +40,26 @@ export interface IImage {
     src: string,
     alt?: string
 }
+
+export interface ITableRowData {
+    [key: string]: string;
+}
+
+export interface CustomTableProps {
+    columns: string[];
+    data: ITableRowData[];
+}
+
+export interface ITrProps {
+    columns: string[];
+    row: ITableRowData;
+}
+
+export interface ITcProps {
+    content: string | React.ReactNode;
+}
+
+export interface ITableHeaderProps {
+    columns: string[];
+}
+

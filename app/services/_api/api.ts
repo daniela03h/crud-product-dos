@@ -80,3 +80,4 @@ export async function deleteProducts(id: string): Promise<IProduct> {
     const data = response.json();
     return data
 }
+

@@ -62,3 +62,4 @@ export interface ITcProps {
 export interface ITableHeaderProps {
     columns: string[];
 }
+
